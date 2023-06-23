@@ -55,7 +55,7 @@ class Car(db.Model):
     car_make = db.Column(db.String(100), nullable=False)
     car_year = db.Column(db.String(4), nullable=False)
     car_color = db.Column(db.String(50), nullable=False)
-    car_token = db.Column(db.String, db.ForeignKey('user.token'), unique=True)
+    car_token = db.Column(db.String, db.ForeignKey('user.token'))
 
     def __init__(self, car_name, car_model, car_make, car_year, car_color, car_token, id=''):
         self.id = self.set_id()
